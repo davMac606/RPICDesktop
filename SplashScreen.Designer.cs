@@ -55,13 +55,14 @@ namespace RPIC
             // 
             this.pbSplash.Image = ((System.Drawing.Image)(resources.GetObject("pbSplash.Image")));
             this.pbSplash.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbSplash.InitialImage")));
-            this.pbSplash.Location = new System.Drawing.Point(-1, -1);
+            this.pbSplash.Location = new System.Drawing.Point(273, 112);
             this.pbSplash.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbSplash.Name = "pbSplash";
-            this.pbSplash.Size = new System.Drawing.Size(934, 489);
+            this.pbSplash.Size = new System.Drawing.Size(378, 402);
             this.pbSplash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSplash.TabIndex = 1;
             this.pbSplash.TabStop = false;
+            this.pbSplash.Click += new System.EventHandler(this.pbSplash_Click);
             // 
             // label1
             // 
@@ -77,7 +78,7 @@ namespace RPIC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
+            this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(933, 588);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbSplash);
@@ -90,6 +91,7 @@ namespace RPIC
             this.Name = "SplashScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.SplashScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbSplash)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

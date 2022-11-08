@@ -28,5 +28,14 @@ namespace RPIC
             }
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<CadastroUsuario>().Count() == 0)
+            {
+                CadastroUsuario cadUser = new CadastroUsuario();
+                cadUser.Show();
+            }
+        }
     }
 }
