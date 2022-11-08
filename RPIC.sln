@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31829.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPIC", "RPIC.csproj", "{3586C8D1-A1AC-46F1-A541-5EBED1DC4993}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3586C8D1-A1AC-46F1-A541-5EBED1DC4993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3586C8D1-A1AC-46F1-A541-5EBED1DC4993}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3586C8D1-A1AC-46F1-A541-5EBED1DC4993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3586C8D1-A1AC-46F1-A541-5EBED1DC4993}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24864F56-1CDF-485E-B15D-3CE2E7A2BAA2}
+	EndGlobalSection
+EndGlobal
