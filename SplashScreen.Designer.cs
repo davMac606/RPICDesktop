@@ -35,7 +35,9 @@ namespace RPIC
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pbSplash = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pbSom = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbSplash)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSom)).BeginInit();
             this.SuspendLayout();
             // 
             // pbProgresso
@@ -74,12 +76,26 @@ namespace RPIC
             this.label1.TabIndex = 2;
             this.label1.Text = "Bem vindo ao RPIC!";
             // 
+            // pbSom
+            // 
+            this.pbSom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbSom.Image = ((System.Drawing.Image)(resources.GetObject("pbSom.Image")));
+            this.pbSom.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbSom.InitialImage")));
+            this.pbSom.Location = new System.Drawing.Point(871, 489);
+            this.pbSom.Name = "pbSom";
+            this.pbSom.Size = new System.Drawing.Size(50, 50);
+            this.pbSom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSom.TabIndex = 3;
+            this.pbSom.TabStop = false;
+            this.pbSom.Click += new System.EventHandler(this.pbSom_Click);
+            // 
             // SplashScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(933, 588);
+            this.Controls.Add(this.pbSom);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbSplash);
             this.Controls.Add(this.pbProgresso);
@@ -93,6 +109,7 @@ namespace RPIC
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.SplashScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbSplash)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSom)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,6 +121,7 @@ namespace RPIC
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pbSplash;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pbSom;
     }
 }
 

@@ -55,5 +55,11 @@ namespace RPIC
         {
 
         }
+
+        private void pbSom_Click(object sender, EventArgs e)
+        {
+            player.Stop();
+            pbSom.Image = RPIC.Properties.Resources.ResourceManager
+        }
     }
 }
