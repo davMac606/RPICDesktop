@@ -31,7 +31,7 @@ namespace RPIC
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            if (DialogResult.OK != MessageBox.Show("Deseja mesmo sair?", "Alerta do Sistema", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+            if (DialogResult.Yes == MessageBox.Show("Deseja mesmo sair?", "Alerta do Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 this.Close();
             }
