@@ -11,13 +11,20 @@ using System.Windows.Forms;
 namespace RPIC
 {
     public partial class MainMenu : Form
-    {  
-        
+    {
+
         public MainMenu()
         {
             InitializeComponent();
-          
+
+            if (Dao_Conexao.getConexao("143.106.241.3", "cl201238", "cl201238", "cl*14032006"))
+            {
+
+            }
         }
+
+
+        
       
         private void btnSair_Click(object sender, EventArgs e)
         {
@@ -51,7 +58,7 @@ namespace RPIC
 
         private void btnSite_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://ormomeida.github.io/roedores.net/");
+            System.Diagnostics.Process.Start("https://davmac606.github.io/ProjetoBoostrap201238/");
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -68,23 +75,28 @@ namespace RPIC
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
+            
             if (Application.OpenForms.OfType<CadastroUsuario>().Count() == 0)
             {
-                grpMenu.Visible = false;
                 grpSobre.Visible = false;
                 CadastroUsuario cad = new CadastroUsuario();
+                cad.aberta = true;
+                cad.StartPosition = FormStartPosition.CenterParent;
                 cad.Show();
-                cad.MdiParent = this;
+                
+                
                
             } else
             {
-              grpMenu.Visible = true;
                 MessageBox.Show("Já existe uma guia de cadastro aberta. Por favor, feche esta guia para abrir uma nova.", "Alerta do Sistema", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                
             }
         }
 
         private void MainMenu_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void grpMenu_Enter(object sender, EventArgs e)
         {
 
         }

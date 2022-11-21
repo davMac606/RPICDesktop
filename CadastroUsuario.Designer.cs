@@ -30,8 +30,8 @@ namespace RPIC
         private void InitializeComponent()
         {
             this.grpCadastroUser = new System.Windows.Forms.GroupBox();
+            this.btnCadastro = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.btnSair = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -41,8 +41,8 @@ namespace RPIC
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSair = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.btnCadastro = new System.Windows.Forms.Button();
             this.grpCadastroUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbIdade)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +69,16 @@ namespace RPIC
             this.grpCadastroUser.TabStop = false;
             this.grpCadastroUser.Text = "Cadastro de Usuários";
             // 
+            // btnCadastro
+            // 
+            this.btnCadastro.Location = new System.Drawing.Point(10, 451);
+            this.btnCadastro.Name = "btnCadastro";
+            this.btnCadastro.Size = new System.Drawing.Size(700, 57);
+            this.btnCadastro.TabIndex = 11;
+            this.btnCadastro.Text = "Cadastrar";
+            this.btnCadastro.UseVisualStyleBackColor = true;
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
+            // 
             // btnCadastrar
             // 
             this.btnCadastrar.Location = new System.Drawing.Point(10, 586);
@@ -78,20 +88,6 @@ namespace RPIC
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // btnSair
-            // 
-            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.Location = new System.Drawing.Point(988, 8);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(129, 57);
-            this.btnSair.TabIndex = 9;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = false;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // txtSenha
             // 
@@ -172,6 +168,20 @@ namespace RPIC
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
             // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Location = new System.Drawing.Point(599, 8);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(129, 57);
+            this.btnSair.TabIndex = 9;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // btnLogin
             // 
             this.btnLogin.Location = new System.Drawing.Point(12, 8);
@@ -181,21 +191,12 @@ namespace RPIC
             this.btnLogin.Text = "Já tem uma conta?";
             this.btnLogin.UseVisualStyleBackColor = true;
             // 
-            // btnCadastro
-            // 
-            this.btnCadastro.Location = new System.Drawing.Point(10, 451);
-            this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(700, 57);
-            this.btnCadastro.TabIndex = 11;
-            this.btnCadastro.Text = "Cadastrar";
-            this.btnCadastro.UseVisualStyleBackColor = true;
-            // 
             // CadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1129, 637);
+            this.ClientSize = new System.Drawing.Size(736, 637);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.grpCadastroUser);
             this.Controls.Add(this.btnSair);
@@ -223,7 +224,7 @@ namespace RPIC
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.Button btnSair;
+        public System.Windows.Forms.Button btnSair;
         public System.Windows.Forms.Button btnCadastrar;
         public System.Windows.Forms.Button btnLogin;
         public System.Windows.Forms.Button btnCadastro;

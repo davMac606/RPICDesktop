@@ -36,6 +36,7 @@ namespace RPIC
             this.btnSite = new System.Windows.Forms.Button();
             this.grpSobre = new System.Windows.Forms.GroupBox();
             this.grpMenu = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.grpSobre.SuspendLayout();
             this.grpMenu.SuspendLayout();
             this.SuspendLayout();
@@ -46,7 +47,7 @@ namespace RPIC
             this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(1666, 9);
+            this.btnSair.Location = new System.Drawing.Point(988, 15);
             this.btnSair.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(169, 72);
@@ -88,6 +89,7 @@ namespace RPIC
             // grpSobre
             // 
             this.grpSobre.BackColor = System.Drawing.Color.LightGray;
+            this.grpSobre.Controls.Add(this.textBox1);
             this.grpSobre.Controls.Add(this.btnSite);
             this.grpSobre.Location = new System.Drawing.Point(12, 87);
             this.grpSobre.Name = "grpSobre";
@@ -103,18 +105,31 @@ namespace RPIC
             this.grpMenu.Controls.Add(this.btnSair);
             this.grpMenu.Controls.Add(this.btnLogin);
             this.grpMenu.Controls.Add(this.btnCadastro);
-            this.grpMenu.Location = new System.Drawing.Point(12, 12);
+            this.grpMenu.Location = new System.Drawing.Point(11, 12);
             this.grpMenu.Name = "grpMenu";
-            this.grpMenu.Size = new System.Drawing.Size(1896, 619);
+            this.grpMenu.Size = new System.Drawing.Size(1165, 613);
             this.grpMenu.TabIndex = 11;
             this.grpMenu.TabStop = false;
+            this.grpMenu.Enter += new System.EventHandler(this.grpMenu_Enter);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(141, 24);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(558, 57);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.Text = "Antes de tudo, gostaríamos de agradecer por escolher nossos serviços.\r\nNeste arqu" +
+    "ivo você encontrará as telas de cadastro e login, as quais lhe permitirão baixar" +
+    " nosso programa.\r\n";
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1920, 637);
+            this.ClientSize = new System.Drawing.Size(1188, 637);
             this.Controls.Add(this.grpMenu);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -125,6 +140,7 @@ namespace RPIC
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.grpSobre.ResumeLayout(false);
+            this.grpSobre.PerformLayout();
             this.grpMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -139,5 +155,6 @@ namespace RPIC
         private System.Windows.Forms.Button btnSite;
         public System.Windows.Forms.GroupBox grpSobre;
         public System.Windows.Forms.GroupBox grpMenu;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
