@@ -46,7 +46,7 @@ namespace RPIC
 
         private void grpSobre_Enter(object sender, EventArgs e)
         {
-           
+       
         }
 
         private void btnSite_Click(object sender, EventArgs e)
@@ -58,9 +58,11 @@ namespace RPIC
         {
             if (Application.OpenForms.OfType<LoginUser>().Count() == 0)
             {
+                grpSobre.Visible = false;
                 LoginUser log = new LoginUser();
                 log.Show();
                 log.MdiParent = this;
+                
             }
         }
 
@@ -68,10 +70,23 @@ namespace RPIC
         {
             if (Application.OpenForms.OfType<CadastroUsuario>().Count() == 0)
             {
+                grpMenu.Visible = false;
+                grpSobre.Visible = false;
                 CadastroUsuario cad = new CadastroUsuario();
                 cad.Show();
                 cad.MdiParent = this;
+               
+            } else
+            {
+              grpMenu.Visible = true;
+                MessageBox.Show("Já existe uma guia de cadastro aberta. Por favor, feche esta guia para abrir uma nova.", "Alerta do Sistema", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                
             }
+        }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

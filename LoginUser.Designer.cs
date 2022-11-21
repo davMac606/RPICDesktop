@@ -30,27 +30,37 @@ namespace RPIC
         private void InitializeComponent()
         {
             this.grpLogin = new System.Windows.Forms.GroupBox();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.grpLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpLogin
             // 
+            this.grpLogin.BackColor = System.Drawing.Color.LightGray;
             this.grpLogin.Controls.Add(this.btnLogin);
             this.grpLogin.Controls.Add(this.label2);
             this.grpLogin.Controls.Add(this.txtSenha);
             this.grpLogin.Controls.Add(this.txtUsername);
             this.grpLogin.Controls.Add(this.label1);
-            this.grpLogin.Location = new System.Drawing.Point(12, 12);
+            this.grpLogin.Location = new System.Drawing.Point(63, 29);
             this.grpLogin.Name = "grpLogin";
-            this.grpLogin.Size = new System.Drawing.Size(909, 564);
+            this.grpLogin.Size = new System.Drawing.Size(789, 515);
             this.grpLogin.TabIndex = 0;
             this.grpLogin.TabStop = false;
             this.grpLogin.Text = "Login de Usuário";
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(9, 452);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(774, 57);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -85,24 +95,15 @@ namespace RPIC
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome de usuário:";
             // 
-            // btnLogin
-            // 
-            this.btnLogin.Location = new System.Drawing.Point(9, 501);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(129, 57);
-            this.btnLogin.TabIndex = 4;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            // 
             // LoginUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PeachPuff;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(933, 588);
             this.Controls.Add(this.grpLogin);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "LoginUser";
             this.Text = "LoginUser";

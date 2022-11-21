@@ -106,7 +106,7 @@ namespace RPIC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PeachPuff;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(933, 588);
             this.Controls.Add(this.pbSound);
             this.Controls.Add(this.pbNoSound);

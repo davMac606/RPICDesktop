@@ -34,10 +34,10 @@ namespace RPIC
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnSite = new System.Windows.Forms.Button();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.grpSobre = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.grpMenu = new System.Windows.Forms.GroupBox();
             this.grpSobre.SuspendLayout();
+            this.grpMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSair
@@ -45,10 +45,11 @@ namespace RPIC
             this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.Location = new System.Drawing.Point(1779, 13);
+            this.btnSair.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(1666, 9);
             this.btnSair.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(129, 57);
+            this.btnSair.Size = new System.Drawing.Size(169, 72);
             this.btnSair.TabIndex = 0;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
@@ -56,7 +57,7 @@ namespace RPIC
             // 
             // btnCadastro
             // 
-            this.btnCadastro.Location = new System.Drawing.Point(12, 13);
+            this.btnCadastro.Location = new System.Drawing.Point(12, 24);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(129, 57);
             this.btnCadastro.TabIndex = 1;
@@ -66,7 +67,7 @@ namespace RPIC
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(147, 13);
+            this.btnLogin.Location = new System.Drawing.Point(147, 24);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(129, 57);
             this.btnLogin.TabIndex = 4;
@@ -84,48 +85,37 @@ namespace RPIC
             this.btnSite.UseVisualStyleBackColor = true;
             this.btnSite.Click += new System.EventHandler(this.btnSite_Click);
             // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Location = new System.Drawing.Point(141, 24);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(820, 484);
-            this.webBrowser1.TabIndex = 6;
-            this.webBrowser1.Url = new System.Uri("https://ormomeida.github.io/roedores.net/", System.UriKind.Absolute);
-            // 
             // grpSobre
             // 
-            this.grpSobre.Controls.Add(this.webBrowser1);
+            this.grpSobre.BackColor = System.Drawing.Color.LightGray;
             this.grpSobre.Controls.Add(this.btnSite);
-            this.grpSobre.Location = new System.Drawing.Point(12, 92);
+            this.grpSobre.Location = new System.Drawing.Point(12, 87);
             this.grpSobre.Name = "grpSobre";
-            this.grpSobre.Size = new System.Drawing.Size(1476, 514);
+            this.grpSobre.Size = new System.Drawing.Size(970, 514);
             this.grpSobre.TabIndex = 5;
             this.grpSobre.TabStop = false;
             this.grpSobre.Text = "Sobre o RPIC";
             this.grpSobre.Enter += new System.EventHandler(this.grpSobre_Enter);
             // 
-            // button2
+            // grpMenu
             // 
-            this.button2.Location = new System.Drawing.Point(292, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.grpMenu.Controls.Add(this.grpSobre);
+            this.grpMenu.Controls.Add(this.btnSair);
+            this.grpMenu.Controls.Add(this.btnLogin);
+            this.grpMenu.Controls.Add(this.btnCadastro);
+            this.grpMenu.Location = new System.Drawing.Point(12, 12);
+            this.grpMenu.Name = "grpMenu";
+            this.grpMenu.Size = new System.Drawing.Size(1896, 619);
+            this.grpMenu.TabIndex = 11;
+            this.grpMenu.TabStop = false;
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1920, 1061);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.grpSobre);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.btnCadastro);
-            this.Controls.Add(this.btnSair);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1920, 637);
+            this.Controls.Add(this.grpMenu);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
@@ -133,20 +123,21 @@ namespace RPIC
             this.Name = "MainMenu";
             this.Text = "MainMenu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.grpSobre.ResumeLayout(false);
+            this.grpMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Button btnCadastro;
+        public System.Windows.Forms.Button btnSair;
+        public System.Windows.Forms.Button btnCadastro;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnSite;
-        private System.Windows.Forms.WebBrowser webBrowser1;
-        private System.Windows.Forms.GroupBox grpSobre;
-        private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.GroupBox grpSobre;
+        public System.Windows.Forms.GroupBox grpMenu;
     }
 }

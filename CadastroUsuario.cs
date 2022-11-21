@@ -16,7 +16,7 @@ namespace RPIC
         {
             InitializeComponent();
         }
-
+        MainMenu mn = new MainMenu();
         private void tbIdade_ValueChanged(object sender, EventArgs e)
         {
             lblIdade.Text = tbIdade.Value.ToString();
@@ -33,11 +33,13 @@ namespace RPIC
         {
             if (DialogResult.Yes == MessageBox.Show("Deseja mesmo sair?", "Alerta do Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
-                this.Close();
+                this.Hide();
+                mn.grpMenu.Visible = true;
+                
             }
             else
             {
-
+                
             }
         }
 
