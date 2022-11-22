@@ -42,7 +42,6 @@ namespace RPIC
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.grpCadastroUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbIdade)).BeginInit();
             this.SuspendLayout();
@@ -182,22 +181,12 @@ namespace RPIC
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // btnLogin
-            // 
-            this.btnLogin.Location = new System.Drawing.Point(12, 8);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(225, 57);
-            this.btnLogin.TabIndex = 10;
-            this.btnLogin.Text = "Já tem uma conta?";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            // 
             // CadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(736, 637);
-            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.grpCadastroUser);
             this.Controls.Add(this.btnSair);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -226,7 +215,6 @@ namespace RPIC
         private System.Windows.Forms.TextBox txtSenha;
         public System.Windows.Forms.Button btnSair;
         public System.Windows.Forms.Button btnCadastrar;
-        public System.Windows.Forms.Button btnLogin;
         public System.Windows.Forms.Button btnCadastro;
     }
 }

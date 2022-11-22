@@ -68,5 +68,15 @@ namespace RPIC
                 MessageBox.Show("Cadastro falhou. Por favor, tente novamente.", "Alerta de Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            MainMenu mn = new MainMenu();
+            LoginUser login = new LoginUser();
+            this.Close();
+            login.MdiParent = mn;
+            login.Show();
+          
+        }
     }
 }

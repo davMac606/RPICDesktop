@@ -79,6 +79,12 @@ namespace RPIC
             Age = age;
         }
 
+        public Usuario(string username, string password)
+        {
+            Username = username;
+            Password = password;
+        }
+
         public Usuario()
         {
 
@@ -101,6 +107,26 @@ namespace RPIC
                 Dao_Conexao.con.Close();
             }
             return cad;
+        }
+
+        public bool loginUsuario()
+        {
+            bool log = false;
+            try
+            {
+                Dao_Conexao.con.Open();
+                MySqlCommand login = new MySqlCommand("SELECT userUsername, userPassword FROM UserRPIC WHERE userUsername = '" + Username + "' AND userPassword = '" + Password + "'", Dao_Conexao.con);
+                MySqlDataReader dr = login.ExecuteReader();
+
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            } finally
+            {
+                Dao_Conexao.con.Close();
+            }
+            return log;
+
         }
     }
 }
