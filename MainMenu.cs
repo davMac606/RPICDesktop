@@ -114,5 +114,15 @@ namespace RPIC
         {
 
         }
+
+        /*private void btnSair_MouseHover(object sender, EventArgs e)
+        {
+            Rectangle screen = Screen.PrimaryScreen.WorkingArea;
+            Random rnd = new Random();
+            int num = rnd.Next(screen.Width - btnSair.Width);
+            int num1 = rnd.Next(screen.Height - btnSair.Height);
+
+            btnSair.Location = new Point(num, num1);
+        }*/
     }
 }

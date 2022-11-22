@@ -49,10 +49,10 @@ namespace RPIC
             this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(465, 511);
+            this.btnSair.Location = new System.Drawing.Point(520, 491);
             this.btnSair.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(169, 72);
+            this.btnSair.Size = new System.Drawing.Size(93, 39);
             this.btnSair.TabIndex = 0;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
@@ -60,9 +60,9 @@ namespace RPIC
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(630, 437);
+            this.btnLogin.Location = new System.Drawing.Point(487, 372);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(158, 67);
+            this.btnLogin.Size = new System.Drawing.Size(158, 38);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -70,9 +70,9 @@ namespace RPIC
             // 
             // btnSite
             // 
-            this.btnSite.Location = new System.Drawing.Point(314, 437);
+            this.btnSite.Location = new System.Drawing.Point(490, 430);
             this.btnSite.Name = "btnSite";
-            this.btnSite.Size = new System.Drawing.Size(155, 67);
+            this.btnSite.Size = new System.Drawing.Size(155, 38);
             this.btnSite.TabIndex = 0;
             this.btnSite.Text = "Cadastrar";
             this.btnSite.UseVisualStyleBackColor = true;
@@ -107,9 +107,9 @@ namespace RPIC
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(314, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(392, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(474, 408);
+            this.pictureBox1.Size = new System.Drawing.Size(348, 318);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;

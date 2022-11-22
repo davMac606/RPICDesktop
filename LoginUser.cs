@@ -51,7 +51,8 @@ namespace RPIC
 
         private void LoginUser_Load(object sender, EventArgs e)
         {
-            pbNotShown.Visible = false;
+            pbShown.Visible = false;
+            txtSenha.PasswordChar = '*';
         }
 
         private void pbShown_Click(object sender, EventArgs e)

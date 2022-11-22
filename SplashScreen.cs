@@ -13,7 +13,7 @@ namespace RPIC
 {
     public partial class SplashScreen : Form
     {
-        System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Users\User\source\repos\RPICDesktop\intro.wav");
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Users\aluno\source\repos\RPICDesktop\intro.wav");
       
       
         
@@ -29,6 +29,7 @@ namespace RPIC
             label1.Height = 20;
             player.Play();
             pbSound.Visible = false;
+         
         }
 
         

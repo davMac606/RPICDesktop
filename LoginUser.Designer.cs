@@ -31,6 +31,8 @@ namespace RPIC
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginUser));
             this.grpLogin = new System.Windows.Forms.GroupBox();
+            this.pbNotShown = new System.Windows.Forms.PictureBox();
+            this.pbShown = new System.Windows.Forms.PictureBox();
             this.pbData = new System.Windows.Forms.PictureBox();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -38,12 +40,10 @@ namespace RPIC
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pbShown = new System.Windows.Forms.PictureBox();
-            this.pbNotShown = new System.Windows.Forms.PictureBox();
             this.grpLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbShown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNotShown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbData)).BeginInit();
             this.SuspendLayout();
             // 
             // grpLogin
@@ -52,18 +52,40 @@ namespace RPIC
             this.grpLogin.Controls.Add(this.pbNotShown);
             this.grpLogin.Controls.Add(this.pbShown);
             this.grpLogin.Controls.Add(this.pbData);
-            this.grpLogin.Controls.Add(this.btnSair);
             this.grpLogin.Controls.Add(this.btnLogin);
             this.grpLogin.Controls.Add(this.label2);
             this.grpLogin.Controls.Add(this.txtSenha);
             this.grpLogin.Controls.Add(this.txtUsername);
             this.grpLogin.Controls.Add(this.label1);
+            this.grpLogin.Controls.Add(this.btnSair);
             this.grpLogin.Location = new System.Drawing.Point(12, 12);
             this.grpLogin.Name = "grpLogin";
             this.grpLogin.Size = new System.Drawing.Size(977, 340);
             this.grpLogin.TabIndex = 0;
             this.grpLogin.TabStop = false;
             this.grpLogin.Text = "Login de Usuário";
+            // 
+            // pbNotShown
+            // 
+            this.pbNotShown.Image = ((System.Drawing.Image)(resources.GetObject("pbNotShown.Image")));
+            this.pbNotShown.Location = new System.Drawing.Point(334, 80);
+            this.pbNotShown.Name = "pbNotShown";
+            this.pbNotShown.Size = new System.Drawing.Size(27, 25);
+            this.pbNotShown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbNotShown.TabIndex = 13;
+            this.pbNotShown.TabStop = false;
+            this.pbNotShown.Click += new System.EventHandler(this.pbNotShown_Click);
+            // 
+            // pbShown
+            // 
+            this.pbShown.Image = ((System.Drawing.Image)(resources.GetObject("pbShown.Image")));
+            this.pbShown.Location = new System.Drawing.Point(334, 80);
+            this.pbShown.Name = "pbShown";
+            this.pbShown.Size = new System.Drawing.Size(27, 25);
+            this.pbShown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbShown.TabIndex = 12;
+            this.pbShown.TabStop = false;
+            this.pbShown.Click += new System.EventHandler(this.pbShown_Click);
             // 
             // pbData
             // 
@@ -132,28 +154,6 @@ namespace RPIC
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome de usuário:";
             // 
-            // pbShown
-            // 
-            this.pbShown.Image = ((System.Drawing.Image)(resources.GetObject("pbShown.Image")));
-            this.pbShown.Location = new System.Drawing.Point(334, 80);
-            this.pbShown.Name = "pbShown";
-            this.pbShown.Size = new System.Drawing.Size(27, 25);
-            this.pbShown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbShown.TabIndex = 12;
-            this.pbShown.TabStop = false;
-            this.pbShown.Click += new System.EventHandler(this.pbShown_Click);
-            // 
-            // pbNotShown
-            // 
-            this.pbNotShown.Image = ((System.Drawing.Image)(resources.GetObject("pbNotShown.Image")));
-            this.pbNotShown.Location = new System.Drawing.Point(334, 80);
-            this.pbNotShown.Name = "pbNotShown";
-            this.pbNotShown.Size = new System.Drawing.Size(27, 25);
-            this.pbNotShown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbNotShown.TabIndex = 13;
-            this.pbNotShown.TabStop = false;
-            this.pbNotShown.Click += new System.EventHandler(this.pbNotShown_Click);
-            // 
             // LoginUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -169,9 +169,9 @@ namespace RPIC
             this.Load += new System.EventHandler(this.LoginUser_Load);
             this.grpLogin.ResumeLayout(false);
             this.grpLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbShown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNotShown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbData)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -96,8 +96,9 @@ namespace RPIC
             try
             {
                 Dao_Conexao.con.Open();
-                MySqlCommand cadastro = new MySqlCommand("INSERT INTO UserRPIC (userName, userUsername, userPassword, userAge) VALUES ('" + Name + "','" + Username + "','" + Password + "','" + Age + "')", Dao_Conexao.con);
-                cadastro.ExecuteNonQuery();
+                string sql = "INSERT INTO UserRPIC (userName, userUsername, userPassword, userAge) VALUES ('" + Name + "','" + Username + "','" + Password + "','" + Age + "')";
+                MySqlCommand cadastro = new MySqlCommand( sql, Dao_Conexao.con);
+                Console.WriteLine(sql);
                 cad = true;
             } catch (Exception ex)
             {
@@ -115,9 +116,10 @@ namespace RPIC
             try
             {
                 Dao_Conexao.con.Open();
-                MySqlCommand login = new MySqlCommand("SELECT userUsername, userPassword FROM UserRPIC WHERE userUsername = '" + Username + "' AND userPassword = '" + Password + "'", Dao_Conexao.con);
+                string sql = "SELECT * FROM UserRPIC WHERE userUsername = '" + Username + "' AND userPassword = '" + Password + "'";
+                MySqlCommand login = new MySqlCommand(sql, Dao_Conexao.con);
                 MySqlDataReader dr = login.ExecuteReader();
-
+                log = dr.Read();
             } catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
